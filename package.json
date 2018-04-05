@@ -5,6 +5,7 @@
   "homepage": "https://agrandhi18.github.io/avinash-portfolio-app",
   "dependencies": {
     "gh-pages": "^1.1.0",
+    "npm": "^5.8.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-mdl": "^1.11.0",
