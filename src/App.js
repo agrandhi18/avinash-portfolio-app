@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import {Layout, Header, Navigation, Drawer, Content} from 'react-mdl';
+import {Layout, Header, Navigation, Drawer} from 'react-mdl';
 import Main from "./components/main";
-import './App.css';
 import { Link } from "react-router-dom";
 
 class App extends Component {
@@ -13,7 +12,7 @@ class App extends Component {
             <Navigation>
               <Link to="/experience">Experience</Link>
               <Link to="/resume">Resume</Link>
-              <Link to="/aboutme">About Me</Link>
+              <Link to="/skills">Skills</Link>
               <Link to="/contact">Contact</Link>
             </Navigation>
           </Header>
@@ -24,10 +23,9 @@ class App extends Component {
             <Link to="/contact">Contact</Link>
             </Navigation>
           </Drawer>
-          <Content>
-            <div className="page-content" />
-            <Main></Main>
-          </Content>
+          <div className="mainContent">
+            <Main style = {{ backgroundColor: "blue"}}></Main>
+          </div>
         </Layout>
       </div>
     );

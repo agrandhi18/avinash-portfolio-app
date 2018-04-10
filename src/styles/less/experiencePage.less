@@ -1,0 +1,21 @@
+.experience-body {
+  width: 100%;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+
+// This is used in cards
+.testClass::before {
+  content: "";
+  position: absolute;
+  width: calc(100% - 2em);
+  height: calc(100% - 2em);
+  left: 1em;
+  right: 1em;
+  top: 1em;
+  background-color: darkgrey;
+  opacity: 0.2;
+  transform: skewX(20deg);
+  box-shadow: 10px 5px 5px black;
+}

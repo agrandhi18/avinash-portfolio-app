@@ -1,0 +1,50 @@
+.skills-body {
+  width: 100%;
+  justify-content: center;
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+  .skills-body {
+    padding: 2em;
+    &::before{
+      background-color: black;
+      position: absolute;
+      opacity: 0.5;
+      content: "";
+      width: 100%;
+      margin: auto;
+      height: 100%;
+      top: 0;
+      z-index: 2;
+    }
+  }
+}
+
+// Desktop view
+
+@media only screen and (min-width : 992px) {
+    .skills-body {
+      padding: 3em;
+      &::before{
+        background-color: black;
+        position: absolute;
+        opacity: 0.5;
+        content: "";
+        width: 100%;
+        margin: auto;
+        height: 100%;
+        top: 0;
+        z-index: 2;
+      }
+    }
+}

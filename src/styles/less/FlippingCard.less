@@ -1,0 +1,53 @@
+
+.flippingCard{
+  display: inline-block;
+  border: 2px solid cadetblue;
+  background-color: rgba(192,192,192,0.25);
+  z-index: 3;
+  > img {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 5%;
+  }
+}
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+  .flippingCard {
+    width: 30%;
+    margin-right: 5% ;
+    margin-bottom: 5% ;
+    height: 150px;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+  .flippingCard {
+    width: 20%;
+    margin-right: 5% ;
+    margin-bottom: 5% ;
+    height: 150px;
+  }
+}
+
+@media only screen and (min-width : 992px) {
+  .flippingCard {
+    width: 17%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    height: 135px;
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+  .flippingCard {
+    width: 12%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    height: 154px;
+  }
+}

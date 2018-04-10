@@ -17,7 +17,11 @@
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "less": "lessc src/styles/less/index.less src/styles/css/index.css",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "less": "^3.0.1"
   }
 }
