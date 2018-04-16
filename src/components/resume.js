@@ -6,7 +6,7 @@ class Resume extends Component {
         return (
             <div>
                 <div className="experience-body container"  >
-                    <a className="btn btn-primary" href={"AvinashGrandhi_Resume.pdf"} aria-label="Download" download>
+                    <a className="btn btn-primary" href={"avinash-portfolio-app/AvinashGrandhi_Resume.pdf"} aria-label="Download" download>
                         <i class="fa fa-cloud-download" aria-hidden="true"></i>
                     </a>
                 </div>
