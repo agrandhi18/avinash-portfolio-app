@@ -1,0 +1,59 @@
+// Small
+.screen-sm-down(@rules) {
+  @media screen and (max-width: (@sm-breakpoint - 1)) {
+    @rules();
+  }
+}
+
+.screen-sm-up(@rules) {
+  @media screen and (min-width: @sm-breakpoint) {
+    @rules();
+  }
+}
+
+.screen-sm-only(@rules) {
+  @media screen and (max-width: (@md-breakpoint - 1)) and (min-width: @sm-breakpoint) {
+    @rules();
+  }
+}
+
+// Medium
+.screen-md-down(@rules) {
+  @media screen and (max-width: (@md-breakpoint - 1)) {
+    @rules();
+  }
+}
+
+.screen-md-up(@rules) {
+  @media screen and (min-width: @md-breakpoint) {
+    @rules();
+  }
+}
+
+.screen-md-only(@rules) {
+  @media screen and (max-width: (@powerchart-breakpoint - 1)) and (min-width: @md-breakpoint) {
+    @rules();
+  }
+}
+
+// Large
+// Note: Temporarily using the @powerchart-breakpoint as our "large" breakpoint
+//      due to allowing MPage users with 1280 resolutions within Powerchart
+//      to receive the desktop experience.
+.screen-lg-down(@rules) {
+  @media screen and (max-width: (@powerchart-breakpoint - 1)) {
+    @rules();
+  }
+}
+
+.screen-lg-up(@rules) {
+  @media screen and (min-width: @powerchart-breakpoint) {
+    @rules();
+  }
+}
+
+.screen-lg-only(@rules) {
+  @media screen and (max-width: (@xl-breakpoint - 1)) and (min-width: @powerchart-breakpoint) {
+    @rules();
+  }
+}

@@ -1,64 +1,195 @@
-.header-color {
-  background: #833ab4;
-  /* fallback for old browsers */
-  background: linear-gradient(0deg, #ff6a00 0, #ee0979 100%);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-linear-gradient(0deg, #ff6a00 0, #ee0979 100%);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.flippingCard {
+  display: inline-block;
+  border: 2px solid cadetblue;
+  background-color: rgba(192, 192, 192, 0.25);
+  z-index: 3;
 }
-.mainContent {
-  display: flex;
-  flex-grow: 1;
-}
-.landing-grid {
-  background: #833ab4;
-  /* fallback for old browsers */
-  background: linear-gradient(0deg, #ff6a00 0, #ee0979 100%);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-linear-gradient(0deg, #ff6a00 0, #ee0979 100%);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  text-align: center;
-  position: fixed;
-  top: 0;
-  left: 0;
+.flippingCard > img {
   width: 100%;
   height: 100%;
+  box-sizing: border-box;
+  padding: 5%;
 }
-.avatar-img {
-  height: 250px;
-  padding-top: 5em;
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+  .flippingCard {
+    width: 30%;
+    margin-right: 5% ;
+    margin-bottom: 5% ;
+    height: 150px;
+  }
 }
-.banner-text {
-  background-color: black;
-  opacity: 0.8;
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  .flippingCard {
+    width: 20%;
+    margin-right: 5% ;
+    margin-bottom: 5% ;
+    height: 150px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .flippingCard {
+    width: 17%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    height: 135px;
+  }
+}
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  .flippingCard {
+    width: 12%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    height: 154px;
+  }
+}
+.anchorLink {
+  font-size: 1.5rem;
+  line-height: 1.4166666666666666666667;
+  font-family: lato, sans-serif;
+  white-space: nowrap;
+  cursor: pointer;
+  padding: 0.5em;
+  display: inline-block;
+  margin-left: 25px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #ffffff;
+  /* Hover state */
+  /* Active state */
+}
+.anchorLink:active {
+  outline: 0;
+}
+.container {
+  padding-top: 4rem;
+  width: 100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.app {
+  min-height: 100vh;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.app-header {
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+}
+.app-header__icon {
+  font-size: 1.5rem;
+  line-height: 1.4166666666666666666667;
+  font-family: lato, sans-serif;
+  white-space: nowrap;
+  cursor: pointer;
+  padding: 0.5em;
+  display: inline-block;
+  margin-left: 25px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #ffffff;
+  /* Hover state */
+  /* Active state */
+  position: absolute;
+  background-color: #ffffff;
+  color: #5ec8ee;
+  border-radius: 25% 5% 25% 5%;
+}
+.app-header__icon:active {
+  outline: 0;
+}
+.app-header__nav {
+  width: 100%;
+  background-color: rgba(192, 192, 192, 0.25);
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row-reverse;
+  -moz-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+.app-header__nav ul {
+  margin: 0;
+}
+.app footer {
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(192, 192, 192, 0.25);
+  opacity: 0.9;
+  height: 2rem;
+  bottom: 0;
+  text-align: right;
+  padding-right: 2rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 2;
+  font-weight: bold;
+}
+.landingPage-text-container {
+  background-color: darkcyan;
+  opacity: 0.9;
   width: 75%;
   margin: auto;
   border-radius: 10px;
+  z-index: 5;
+  /* color: cornsilk;*/
+  color: black;
 }
-.banner-text h1 {
+.landingPage-text-container h1 {
   font-size: 66px;
   font-weight: bold;
-  color: white;
   text-align: center;
 }
-.banner-text hr {
-  border-top: 5px dotted white;
+.landingPage-text-container hr {
+  border-top: 5px dotted cornsilk;
   width: 50%;
   margin: auto;
 }
-.banner-text p {
-  color: white;
+.landingPage-text-container p {
   font-size: 20px;
   padding: 1em;
   text-align: center;
+  font-weight: 600;
 }
-.social-links {
+.landingPage-text-container-social-links {
   display: flex;
   width: 50%;
   margin: auto;
   font-size: 5em;
   padding: 8px;
   justify-content: space-around;
+}
+.landingPage-text-container-social-links a {
+  color: black;
 }
 /*Contacts styles*/
 .contact-body {
@@ -82,8 +213,19 @@
 }
 .experience-body {
   width: 100%;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
   justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-flex-grow: 1;
+  -moz-flex-grow: 1;
+  -ms-flex-grow: 1;
   flex-grow: 1;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 .testClass::before {
   content: "";
@@ -140,55 +282,7 @@
     z-index: 2;
   }
 }
-.flippingCard {
-  display: inline-block;
-  border: 2px solid cadetblue;
-  background-color: rgba(192, 192, 192, 0.25);
-  z-index: 3;
-}
-.flippingCard > img {
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  padding: 5%;
-}
-/* Extra Small Devices, Phones */
-@media only screen and (min-width: 480px) {
-  .flippingCard {
-    width: 30%;
-    margin-right: 5% ;
-    margin-bottom: 5% ;
-    height: 150px;
-  }
-}
-/* Small Devices, Tablets */
-@media only screen and (min-width: 768px) {
-  .flippingCard {
-    width: 20%;
-    margin-right: 5% ;
-    margin-bottom: 5% ;
-    height: 150px;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .flippingCard {
-    width: 17%;
-    margin-right: 5%;
-    margin-bottom: 5%;
-    height: 135px;
-  }
-}
-/* Large Devices, Wide Screens */
-@media only screen and (min-width: 1200px) {
-  .flippingCard {
-    width: 12%;
-    margin-right: 5%;
-    margin-bottom: 5%;
-    height: 154px;
-  }
-}
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
 }

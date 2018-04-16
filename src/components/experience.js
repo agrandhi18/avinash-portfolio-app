@@ -7,7 +7,7 @@ import GridContainer from "../helpers/GridContainer";
 class Experience extends Component {
     render() {
         return (
-            <div className="experience-body" style={ {backgroundImage: `url(${image2})`}} >
+            <div className="experience-body container" style={ {backgroundImage: `url(${image2})`}}  >
                {/* <img src = {image2} alt={"ding"} style={{position: "absolute", zIndex: -5}} ></img>*/}
                 <GridContainer
                     yearsValue = "2016 - present"
