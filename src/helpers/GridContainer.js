@@ -1,29 +1,24 @@
 import React, {Component} from 'react';
 
+const defaultClassName = "experience-body-grid";
+
 export default class GridContainer extends Component {
     render() {
+        const detailsList = this.props.description.map((val, i) => <li key = {`listItem__${i}`} className={`${defaultClassName}-li`}>{val}</li>);
         return (
-            <div style={{color: "white"}}>
-
-                <div style={{
-                    textAlign: "left",
-                    position: "relative",
-                    margin: "0px",
-                    padding: "2em",
-                    paddingLeft: "4em"
-                }}>
-                    <div className={"testClass"}>
-                        {this.props.yearsValue}
-                    </div>
-                    <div>
-                        {this.props.companyName}
-                    </div>
-                    <div>
-                        {this.props.jobPosition}
-                    </div>
-                    <div>
-                        {this.props.description}
-                    </div>
+            <div className={defaultClassName}>
+                <div>
+                    <img src = {this.props.image} alt={"ding"}/>
+                    <span>{this.props.yearsValue}</span>
+                </div>
+                <h1>
+                    <i className="fa fa-angle-down" aria-hidden="true"></i>
+                    {this.props.jobPosition}
+                </h1>
+                <div>
+                    <ul>
+                    {detailsList}
+                    </ul>
                 </div>
             </div>
         )

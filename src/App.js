@@ -10,18 +10,18 @@ class App extends Component {
         return (
             <div className={`${defaultClassName}`}>
                 <header className={`${defaultClassName}-header`}>
-                    <Link className={`${defaultClassName}-header__icon`} to="/">AG</Link>
+                    <Link className={`${defaultClassName}-header__icon`} to="/">Avinash Grandhi</Link>
                     <nav className={`${defaultClassName}-header__nav`}>
                         <ul>
+                            <Link className="anchorLink" to="/about">About Me</Link>
                             <Link className="anchorLink" to="/experience">Experience</Link>
-                            <Link className="anchorLink" to="/resume">Resume</Link>
                             <Link className="anchorLink" to="/skills">Skills</Link>
                             <Link className="anchorLink" to="/contact">Contact</Link>
                         </ul>
                     </nav>
                 </header>
                 <Main></Main>
-                <footer> <i class="fa fa-copyright" aria-hidden="true"></i> copyright</footer>
+                <footer> <i className="fa fa-copyright" aria-hidden="true"></i> copyright</footer>
             </div>
         );
     }

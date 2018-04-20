@@ -1,0 +1,43 @@
+.aboutMe{
+  background-repeat: no-repeat;
+  background-size: cover;
+  &-text-container {
+    background-color: darkcyan;
+    opacity: 0.9;
+    width: 55%;
+    .screen-md-down({width:100%});
+    margin: auto;
+    margin-right: 5%;
+    border-radius: 10px;
+    z-index: 5;
+    /* color: cornsilk;*/
+    color: black;
+    h1, h3{
+      font-family: "serif";
+      font-weight: normal;
+      padding: 0 5%;
+      margin:0;
+    }
+    h3 {
+      font-style: italic;
+      margin-bottom: 25px;
+    }
+
+    p{
+      font-size: 1.5em;
+      margin: 12px 5%;
+      list-style:disc outside none;
+      display:list-item;
+    }
+  }
+  &-icon-container {
+    width: 40%;
+    .screen-md-down({width:100%});
+    margin: auto;
+    text-align: center;
+    img {
+      border-radius: 25%;
+    }
+  }
+}
+

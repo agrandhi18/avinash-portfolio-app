@@ -1,8 +1,67 @@
-.experience-body {
+.experience-body, #expBody {
   width: 100%;
   .justify-content(center);
   .flex-grow(1);
-  .flex-direction(column)
+  .flex-direction(column);
+
+  > ul {
+    // There is no other way to increase specificity as cardStack has inline style
+    width: 50% !important;
+    margin: auto !important;
+  }
+  // Grid styles
+  &-grid {
+    text-align: left;
+    position: relative;
+    margin: 0;
+    padding: 2em;
+    padding-left: 4em;
+    color: white;
+    div:first-child {
+      height: 3.5em;
+      display: flex;
+      align-items: center;
+      >img {
+        height: 100%;
+        padding: 18px;
+        background-color: mintcream;
+        border-radius: 25px;
+        width: 175px;
+      }
+      >span {
+        padding-left: 2em;
+        font-size: 2rem;
+        padding-top: 0.5rem;
+        font-weight: 600;
+      }
+    }
+    h1 {
+      font-size: 30px;
+      i {
+        padding-right: 0.5rem;
+      }
+    }
+    &-li {
+      font-size: 1.25rem;
+      font-family: serif;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  &-resume {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    a{
+      font-size: 2rem;
+      text-decoration: none;
+      color: white;
+    }
+    i {
+      font-size: 4rem;
+    }
+  }
 }
 
 
@@ -15,8 +74,19 @@
   left: 1em;
   right: 1em;
   top: 1em;
-  background-color: darkgrey;
+  // background-color: darkgrey;
   opacity: 0.2;
   transform: skewX(20deg);
-  box-shadow: 10px 5px 5px black;
+  // box-shadow: 10px 5px 5px black;
+}
+
+@keyframes jump {
+  0%   {transform: translate3d(0,0,0) scale3d(1,1,1);}
+  20%  {transform: translate3d(0,-20%,0) scale3d(.7,1.5,1);}
+  40%  {transform: translate3d(0,30%,0) scale3d(.7,1.5,1);}
+  100% {transform: translate3d(0,100%,0) scale3d(1.5,.7,1);}
+}
+.jump {
+  transform-origin: 50% 0;
+  animation: jump 1.75s linear alternate infinite;
 }

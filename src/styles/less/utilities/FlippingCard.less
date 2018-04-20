@@ -4,12 +4,54 @@
   border: 2px solid cadetblue;
   background-color: rgba(192,192,192,0.25);
   z-index: 3;
-  > img {
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    padding: 5%;
+
+  // rotating
+  -webkit-transition: 1.2s;
+  transition: 1.2s;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+
+  &:hover{
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
   }
+
+  position: relative;
+
+
+  &-front, &-back{
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background-color: white;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      padding: 5%;
+    }
+  }
+
+  /* front pane, placed above back */
+  &-front {
+    z-index: 2;
+    /* for firefox 31 */
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+
+  /* back, initially hidden pane */
+  &-front {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+
 }
 
 
